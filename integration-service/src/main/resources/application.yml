@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: integration-service
+
+
+server:
+  port: 8088
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

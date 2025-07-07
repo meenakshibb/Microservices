@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  lmsusersdb:
+    image: postgres:15
+    container_name: lmsusersdb
+    environment:
+      POSTGRES_USER: lmsuser
+      POSTGRES_PASSWORD: lmsuserpass
+      POSTGRES_DB: lmsusersdb
+    ports:
+      - "5436:5432"
+    volumes:
+      - lmsusersdb_data:/var/lib/postgresql/data
+
+  lmsloyaltydb:
+    image: postgres:15
+    container_name: lmsloyaltydb
+    environment:
+      POSTGRES_USER: lmsloyaltyuser
+      POSTGRES_PASSWORD: lmsloyaltypass
+      POSTGRES_DB: lmsloyaltydb
+    ports:
+      - "5437:5432"
+    volumes:
+      - lmslmsloyaltydb_data:/var/lib/postgresql/data
+
+volumes:
+  lmsusersdb_data:
+  lmslmsloyaltydb_data:
