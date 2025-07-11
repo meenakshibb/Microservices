@@ -1,6 +1,6 @@
 package com.lms.integration_service.controller;
 
-import com.lms.integration_service.events.OrderPlacedEvent;
+import events.OrderPlacedEvent;
 import com.lms.integration_service.service.KafkaPublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

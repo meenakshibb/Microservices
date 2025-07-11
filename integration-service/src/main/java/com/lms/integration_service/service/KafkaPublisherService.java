@@ -1,6 +1,6 @@
 package com.lms.integration_service.service;
 
-import com.lms.integration_service.events.OrderPlacedEvent;
+import events.OrderPlacedEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
